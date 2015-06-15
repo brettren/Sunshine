@@ -7,8 +7,7 @@ The **DEMO video**, please go [here](https://youtu.be/vGnjMNkPQ8w).
 
 This is my version of the Sunshine code, adding some custom design.  
 
-![Preview1](https://raw.githubusercontent.com/brettren/Sunshine/master/pic/demo1.gif)
-
-![Preview2](https://raw.githubusercontent.com/brettren/Sunshine/master/pic/demo2.gif)
+![demo1](https://raw.githubusercontent.com/brettren/Sunshine/master/pic/demo1.gif) ![demo2](https://raw.githubusercontent.com/brettren/Sunshine/master/pic/demo2.gif)
+![demo3](https://raw.githubusercontent.com/brettren/Sunshine/master/pic/demo3.gif) ![demo4](https://raw.githubusercontent.com/brettren/Sunshine/master/pic/demo4.gif)
 
 For the original version, please go [here](https://github.com/udacity/Sunshine-Version-2).
