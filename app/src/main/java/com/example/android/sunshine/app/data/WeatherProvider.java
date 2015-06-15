@@ -351,7 +351,7 @@ public class WeatherProvider extends ContentProvider {
     @Override
     @TargetApi(11)
     public void shutdown() {
-        mOpenHelper.close();
+            mOpenHelper.close();
         super.shutdown();
     }
 }

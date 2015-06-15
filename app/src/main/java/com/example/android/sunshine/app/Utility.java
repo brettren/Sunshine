@@ -273,4 +273,24 @@ public class Utility {
         }
         return -1;
     }
+
+    public static double[] mMax = new double[10];
+    public static double[] mMin = new double[10];
+
+    public static double getMax(double[] arr){
+        double tmp = arr[0];
+        for (double m: arr){
+            tmp = Math.max(tmp, m);
+        }
+        return tmp;
+    }
+
+    public static double getMin(double[] arr){
+        double tmp = arr[0];
+        for (double m: arr){
+            tmp = Math.min(tmp, m);
+        }
+        return tmp;
+    }
+
 }

@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/libs/achartengine-1.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9932e3fb9fbe54e80873e77f72a99f79e33b3250">
+        <dex dex="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/pre-dexed/debug/achartengine-1.1.0-5ff6420d6f02090aa755482200721011aab68e67.jar" />
+    </item>
+    <item
         jar="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/classes.jar"
         jumboMode="false"
         revision="21.1.2"

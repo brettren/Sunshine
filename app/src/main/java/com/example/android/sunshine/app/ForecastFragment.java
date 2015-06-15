@@ -15,6 +15,7 @@
  */
 package com.example.android.sunshine.app;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.android.sunshine.app.data.WeatherContract;
 
@@ -40,6 +42,8 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
     private ForecastAdapter mForecastAdapter;
 
     private ListView mListView;
+    private TextView mtextView;
+
     private int mPosition = ListView.INVALID_POSITION;
     private boolean mUseTodayLayout;
 
@@ -64,7 +68,8 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
             WeatherContract.WeatherEntry.COLUMN_WEATHER_ID,
             WeatherContract.LocationEntry.COLUMN_COORD_LAT,
             WeatherContract.LocationEntry.COLUMN_COORD_LONG,
-            WeatherContract.LocationEntry.COLUMN_CITY_NAME
+            WeatherContract.LocationEntry.COLUMN_CITY_NAME,
+            WeatherContract.WeatherEntry.COLUMN_HUMIDITY
     };
 
     // These indices are tied to FORECAST_COLUMNS.  If FORECAST_COLUMNS changes, these
@@ -79,6 +84,7 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
     static final int COL_COORD_LAT = 7;
     static final int COL_COORD_LONG = 8;
     static final int COL_CITY_NAME = 9;
+    static final int COL_WEATHER_HUMIDITY = 10;
 
     /**
      * A callback interface that all activities containing this fragment must
@@ -130,6 +136,7 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
 
         View rootView = inflater.inflate(R.layout.fragment_main, container, false); // convert layout to view
 
+
         // Get a reference to the ListView, and attach this adapter to it.
         mListView = (ListView) rootView.findViewById(R.id.listview_forecast);
         mListView.setAdapter(mForecastAdapter);
@@ -152,6 +159,16 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
                 mPosition = position;
             }
         });
+
+        mtextView = (TextView) rootView.findViewById(R.id.textView_intentTochart);
+
+        mtextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), DrawView.class));
+            }
+        });
+
 
         // If there's instance state, mine it for useful information.
         // The end-goal here is that the user never knows that turning their device sideways
@@ -233,6 +250,16 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
             mListView.setBackgroundResource(Utility.getBackgroundForWeatherCondition(weatherId));
         }
 
+        if (data != null && data.moveToFirst()) {
+            int i = 0;
+            do{
+                Utility.mMax[i] = data.getDouble(ForecastFragment.COL_WEATHER_MAX_TEMP);
+                Utility.mMin[i] = data.getDouble(ForecastFragment.COL_WEATHER_MIN_TEMP);
+                i++;
+            }while (i < 10 && data.moveToNext());
+        }
+
+
         if (mPosition != ListView.INVALID_POSITION) {
             // If we don't need to restart the loader, and there's a desired position to restore
             // to, do so now.
@@ -251,4 +278,5 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
             mForecastAdapter.setUseTodayLayout(mUseTodayLayout);
         }
     }
+
 }

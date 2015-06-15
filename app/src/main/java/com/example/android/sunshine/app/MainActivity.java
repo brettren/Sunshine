@@ -130,7 +130,7 @@ public class MainActivity extends ActionBarActivity implements ForecastFragment.
     }
 
     @Override
-    public void onItemSelected(Uri contentUri) {  // 这是fragment的响应机制
+    public void onItemSelected(Uri contentUri) {  // 这是fragment的响应机制 implement the method in Callback interface
         if (mTwoPane) {
             // In two-pane mode, show the detail view in this activity by
             // adding or replacing the detail fragment using a

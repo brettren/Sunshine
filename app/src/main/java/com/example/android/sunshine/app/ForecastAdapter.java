@@ -32,6 +32,7 @@ public class ForecastAdapter extends CursorAdapter {
         public final TextView highTempView;
         public final TextView lowTempView;
         public final TextView cityNameView;
+        public final TextView humidityView;
 
         public ViewHolder(View view) {
             iconView = (ImageView) view.findViewById(R.id.list_item_icon);
@@ -40,6 +41,7 @@ public class ForecastAdapter extends CursorAdapter {
             highTempView = (TextView) view.findViewById(R.id.list_item_high_textview);
             lowTempView = (TextView) view.findViewById(R.id.list_item_low_textview);
             cityNameView = (TextView) view.findViewById(R.id.list_item_cityName_textview);
+            humidityView = (TextView) view.findViewById(R.id.list_item_humidity_textview);
         }
     }
 
@@ -66,13 +68,13 @@ public class ForecastAdapter extends CursorAdapter {
         View view = LayoutInflater.from(context).inflate(layoutId, parent, false); // 先获得LayoutInflater再inflate
 
         ViewHolder viewHolder = new ViewHolder(view);
-        view.setTag(viewHolder);
+        view.setTag(viewHolder);  // viewHolder is stored as tag within the view
 
         return view;
     }
 
     @Override
-    public void bindView(View view, Context context, Cursor cursor) { // bind data to view
+    public void bindView(View view, Context context, Cursor cursor) { // bind cursor to view, the cursor is swapped in by fragment
 
         ViewHolder viewHolder = (ViewHolder) view.getTag();
 
@@ -91,6 +93,7 @@ public class ForecastAdapter extends CursorAdapter {
                 // Get weather icon
                 viewHolder.iconView.setImageResource(Utility.getIconResourceForWeatherCondition(
                         cursor.getInt(ForecastFragment.COL_WEATHER_CONDITION_ID)));
+                viewHolder.humidityView.setText("" + (int)cursor.getFloat(ForecastFragment.COL_WEATHER_HUMIDITY));
                 break;
             }
         }
