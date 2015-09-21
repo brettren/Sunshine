@@ -1,6 +1,8 @@
 Sunshine
 ========
 
+**The App has been published on Google Play (noncommercial), please go [here](https://play.google.com/store/apps/details?id=com.brettren.android.sunshine.app)**.
+
 Sunshine is the companion Android app for the Udacity course [Developing Android Apps: Android Fundamentals](https://www.udacity.com/course/ud853).
 
 The **DEMO video**, please go [here](https://youtu.be/vGnjMNkPQ8w).  
