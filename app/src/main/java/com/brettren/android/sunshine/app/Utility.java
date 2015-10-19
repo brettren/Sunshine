@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.sunshine.app;
+package com.brettren.android.sunshine.app;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -25,6 +25,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Utility {
+
+    final static String API_KEY_PARAM = "APPID";
+    final static String api_key = "4543a1473f99e5bcefed7202855cb8d8";
+
     public static String getPreferredLocation(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         return prefs.getString(context.getString(R.string.pref_location_key),

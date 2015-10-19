@@ -1,4 +1,4 @@
-package com.example.android.sunshine.app;
+package com.brettren.android.sunshine.app;
 
 import android.graphics.Color;
 import android.os.Bundle;

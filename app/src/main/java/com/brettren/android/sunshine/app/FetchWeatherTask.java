@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.sunshine.app;
+package com.brettren.android.sunshine.app;
 
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -24,8 +24,8 @@ import android.os.AsyncTask;
 import android.text.format.Time;
 import android.util.Log;
 
-import com.example.android.sunshine.app.data.*;
-import com.example.android.sunshine.app.data.WeatherContract.WeatherEntry;
+import com.brettren.android.sunshine.app.data.*;
+import com.brettren.android.sunshine.app.data.WeatherContract.WeatherEntry;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -276,17 +276,18 @@ public class FetchWeatherTask extends AsyncTask<String, Void, Void> {  // Params
             // http://openweathermap.org/API#forecast
             final String FORECAST_BASE_URL =
                     "http://api.openweathermap.org/data/2.5/forecast/daily?";
-            final String QUERY_PARAM = "q";
+            final String QUERY_PARAM = "zip";
             final String FORMAT_PARAM = "mode";
             final String UNITS_PARAM = "units";
             final String DAYS_PARAM = "cnt";
 
-            // http://api.openweathermap.org/data/2.5/forecast/daily?q=94043&mode=json&units=metric&cnt=14
+            // http://api.openweathermap.org/data/2.5/forecast/daily?zip=94043&mode=json&units=metric&cnt=14
             Uri builtUri = Uri.parse(FORECAST_BASE_URL).buildUpon()
                     .appendQueryParameter(QUERY_PARAM, params[0])
                     .appendQueryParameter(FORMAT_PARAM, format)
                     .appendQueryParameter(UNITS_PARAM, units)
                     .appendQueryParameter(DAYS_PARAM, Integer.toString(numDays))
+                    .appendQueryParameter(Utility.API_KEY_PARAM, Utility.api_key)
                     .build();
 
             URL url = new URL(builtUri.toString());

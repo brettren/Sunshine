@@ -1,4 +1,4 @@
-package com.example.android.sunshine.app;
+package com.brettren.android.sunshine.app;
 
 import android.content.Context;
 import android.database.Cursor;

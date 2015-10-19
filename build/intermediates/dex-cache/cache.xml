@@ -2,39 +2,39 @@
 <items version="2" >
 
     <item
-        jar="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/libs/achartengine-1.1.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="9932e3fb9fbe54e80873e77f72a99f79e33b3250">
-        <dex dex="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/pre-dexed/debug/achartengine-1.1.0-5ff6420d6f02090aa755482200721011aab68e67.jar" />
-    </item>
-    <item
-        jar="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
-        <dex dex="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/pre-dexed/debug/classes-ce1492e86ba559ae5e085ac7648e86adc128d2cb.jar" />
-    </item>
-    <item
-        jar="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/libs/internal_impl-21.0.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
-        <dex dex="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.2-82f85278dde8438e451905e5ef936d2c80695d82.jar" />
-    </item>
-    <item
         jar="/Users/Brett/Documents/Development/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.2/support-annotations-21.0.2.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
-        <dex dex="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.2-be7ecdc35f10916f542e24d4b6b85f429cc48cfe.jar" />
+        <dex dex="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/pre-dexed/release/support-annotations-21.0.2-be7ecdc35f10916f542e24d4b6b85f429cc48cfe.jar" />
     </item>
     <item
-        jar="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/classes.jar"
+        jar="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/libs/achartengine-1.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9932e3fb9fbe54e80873e77f72a99f79e33b3250">
+        <dex dex="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/pre-dexed/release/achartengine-1.1.0-5ff6420d6f02090aa755482200721011aab68e67.jar" />
+    </item>
+    <item
+        jar="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/jars/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
-        <dex dex="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/pre-dexed/debug/classes-e8a81348d9c9641a81a4995fd4f3b38227a55305.jar" />
+        <dex dex="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/pre-dexed/release/classes-047e7b71de3e0f1626090e4a3c37507f0e088f59.jar" />
+    </item>
+    <item
+        jar="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/jars/libs/internal_impl-21.0.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
+        <dex dex="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/pre-dexed/release/internal_impl-21.0.2-a2d22bd2cc864769653cccd3e4826475004f7e31.jar" />
+    </item>
+    <item
+        jar="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
+        <dex dex="/Users/Brett/AndroidStudioProjects/Sunshine-Version-2_new_5.19/app/build/intermediates/pre-dexed/release/classes-ca0c6b1d96ce4894ee0eaa0487da87b1c1cc49c1.jar" />
     </item>
 
 </items>
