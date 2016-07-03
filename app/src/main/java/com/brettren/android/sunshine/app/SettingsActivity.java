@@ -16,13 +16,20 @@
 package com.brettren.android.sunshine.app;
 
 import android.annotation.TargetApi;
+import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
+import android.util.Log;
+import android.widget.TimePicker;
+
+import java.util.Calendar;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings.
@@ -33,7 +40,12 @@ import android.preference.PreferenceManager;
  * API Guide</a> for more information on developing a Settings UI.
  */
 public class SettingsActivity extends PreferenceActivity
-        implements Preference.OnPreferenceChangeListener {
+        implements Preference.OnPreferenceChangeListener, TimePickerDialog.OnTimeSetListener {
+
+    public static final String KEY_NOTI_HOUR = "key_noti_hour";
+    public static final String KEY_NOTI_MIN = "key_noti_min";
+
+    private Preference mBtnTimePicker;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,6 +57,37 @@ public class SettingsActivity extends PreferenceActivity
         // updated when the preference changes.
         bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_location_key)));
         bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_units_key)));
+
+        mBtnTimePicker = findPreference("btnTimePicker");
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        mBtnTimePicker.setSummary(pref.getInt(KEY_NOTI_HOUR, 8) + ":" + pref.getInt(KEY_NOTI_MIN, 0));
+        mBtnTimePicker.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                showTimeDialog();
+                return false;
+            }
+        });
+    }
+
+    @Override
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+        Log.i("set noti","hour "+hourOfDay +" minute "+ minute);
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        pref.edit().putInt(KEY_NOTI_HOUR, hourOfDay).putInt(KEY_NOTI_MIN, minute).apply();
+        mBtnTimePicker.setSummary(hourOfDay + ":" + minute);
+        Utility.scheduleAlarm(this);
+    }
+
+    private void showTimeDialog(){
+        final Calendar c = Calendar.getInstance();
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        int hour = pref.getInt(SettingsActivity.KEY_NOTI_HOUR, c.get(Calendar.HOUR_OF_DAY));
+        int minute = pref.getInt(SettingsActivity.KEY_NOTI_MIN, c.get(Calendar.MINUTE));
+        // Create a new instance of TimePickerDialog and return it
+        new TimePickerDialog(this, this, hour, minute,
+                false).show();
     }
 
     /**
@@ -74,7 +117,7 @@ public class SettingsActivity extends PreferenceActivity
             if (prefIndex >= 0) {
                 preference.setSummary(listPreference.getEntries()[prefIndex]);
             }
-        } else {
+        } else if (preference instanceof EditTextPreference) {
             // For other preferences, set the summary to the value's simple string representation.
             preference.setSummary(stringValue);
         }

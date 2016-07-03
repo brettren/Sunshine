@@ -199,9 +199,7 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
     }
 
     private void updateWeather() {
-        FetchWeatherTask weatherTask = new FetchWeatherTask(getActivity());
-        String location = Utility.getPreferredLocation(getActivity());
-        weatherTask.execute(location); // location就是传递给asynctask的param
+        getActivity().startService(new Intent(getActivity(), WeatherService.class));
     }
 
     @Override

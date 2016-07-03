@@ -15,19 +15,26 @@
  */
 package com.brettren.android.sunshine.app;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.format.Time;
+import android.util.Log;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Utility {
 
     final static String API_KEY_PARAM = "APPID";
     final static String api_key = "4543a1473f99e5bcefed7202855cb8d8";
+
+    final static String KEY_NOTI = "key_noti";
 
     public static String getPreferredLocation(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -295,6 +302,28 @@ public class Utility {
             tmp = Math.min(tmp, m);
         }
         return tmp;
+    }
+
+    public static void scheduleAlarm(Context context) {
+        Intent intent = new Intent(context, WeatherService.class);
+        intent.putExtra(KEY_NOTI, true);
+        // Create a PendingIntent to be triggered when the alarm goes off
+        final PendingIntent pIntent = PendingIntent.getService(context, WeatherService.REQUEST_CODE,
+                intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        // Set the default alarm at approximately 8:00 a.m.
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(System.currentTimeMillis());
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
+        int hour = pref.getInt(SettingsActivity.KEY_NOTI_HOUR, 8);
+        int min = pref.getInt(SettingsActivity.KEY_NOTI_MIN, 0);
+        calendar.set(Calendar.HOUR_OF_DAY, hour);
+        calendar.set(Calendar.MINUTE, min);
+
+        AlarmManager alarm = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        alarm.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
+                AlarmManager.INTERVAL_DAY, pIntent);
+        Log.d("scheduleAlarm", "hour " + hour + " min " + min);
     }
 
 }

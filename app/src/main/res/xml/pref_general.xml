@@ -17,4 +17,7 @@
         android:entryValues="@array/pref_units_values"
         android:entries="@array/pref_units_options" />
 
+    <Preference
+        android:key="btnTimePicker"
+        android:title="@string/pref_daily_notification" />
 </PreferenceScreen>
