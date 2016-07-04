@@ -1,2 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="2a7e47da654546f9457deb6132364f1bf33a1857">
+        <dex dex="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-8.1.0_b4b5c23d33b1efbd76c16650642918cd182a559f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.0_49c81671b79fb2c7280e8fb2ebd15175864d112c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Brett/Documents/GitHub_doc/Sunshine/app/libs/achartengine-1.1.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="9932e3fb9fbe54e80873e77f72a99f79e33b3250">
+        <dex dex="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/transforms/dex/debug/folders/1000/2/achartengine-1.1.0_008d62359173eb23cf518ab260db06087acf4034/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="82825756edeeb3b56b15e73b2edd56e93da5a444">
+        <dex dex="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-8.1.0_0b760fa6d41e33796cbbbc883c7fe3475d1fdfb2/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-8.1.0_dfba7a8eff6a6fd978ace9368203c9ab5b4f605d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="3aed37c38c56679602255dd72ef356da5d327cda">
+        <dex dex="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-8.1.0_7c2b86b57366bdebacec3844291891db1d6315b6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="82a9309e6626aac09144ffdef1fe715ac72042a8">
+        <dex dex="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_3913958851132059155b02bd732a451464a01bec/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Brett/Documents/Development/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.2.0_db90a51b7bf49c76867d75ed50d9fbafd8ce7638/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="743e32fcf1b26c5b23f00045407de48fbbf55ff5">
+        <dex dex="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6369961a07f6783c2e64c6a25d645d579175a52c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
+        <dex dex="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-21.0.2_892d39ac2a6a4b298f322a25ffeedb2c6e7096e9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/Brett/Documents/GitHub_doc/Sunshine/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.2.0_3964162db21e0f247dd2d30889fb9af9142775a6/classes.dex" />
+    </item>
+
+</items>
